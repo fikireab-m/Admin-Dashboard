@@ -2,10 +2,9 @@
 type HeaderProp = {
   title: string
 }
-
 const Header: React.FC<HeaderProp> = ({ title }): JSX.Element => {
   return (
-    <div className="fixed mt-2 top-0 left-0 right-0 mx-4 bg-gradient-to-r from-pink-700 to-blue-400 px-16 py-3 rounded-md shadow-xl flex justify-between items-center">
+    <div className="fixed mt-2 top-0 left-16 md:left-64 right-0 mx-4 bg-gradient-to-r from-pink-700 to-blue-400 px-16 py-3 rounded-md shadow-xl flex justify-between items-center">
       <span className="text-md lg:text-xl font-bold text-white ">{title}</span>
       <img
         className="inline-block h-10 w-10 rounded-full ring-2 ring-white"
