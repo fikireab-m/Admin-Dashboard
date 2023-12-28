@@ -12,17 +12,10 @@ const sideBarItems = [
         url: "/plans"
     },
     {
-        menuTitle: "Custom plans",
-        url: "/plans/custom"
-    },
-    {
         menuTitle: "Analytics",
         url: "/analytics"
     },
-    {
-        menuTitle: "Registration Flow",
-        url: "/ui"
-    },
+  
     {
         menuTitle: "Settings",
         url: ""
@@ -77,7 +70,7 @@ const Sidebar = (): JSX.Element => {
                                 <>
                                     <a
                                         key={index}
-                                        className="ml-2 py-3 p2-4 flex items-center w-full rounded-md transitions duration-150 hover:text-gray-800 hover:bg-purple-100 hover:scale-105"
+                                        className="ml-2 py-2 px-4 flex items-center w-full rounded-md transitions duration-150 hover:text-gray-800 hover:bg-purple-100 hover:scale-105"
                                         href={item.url}
                                     >
                                         <span className="text-md font-semibold text-gray-800 ">
