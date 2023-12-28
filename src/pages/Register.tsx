@@ -1,4 +1,3 @@
-
 import google from "../assets/icons/google.svg"
 import heartlock from "../assets/hearlock.svg"
 
@@ -7,7 +6,7 @@ const Register = () => {
 
   return (
     <>
-    <div className="w-full h-screen flex justify-center items-center bg-pink-100">
+    <div className="w-full h-screen flex justify-center items-center bg-pink-100 select-none">
       <div className="max-w-sm max-h-fit p-6 bg-white border hover:shadow-xl border-pink-400 rounded-lg shadow-lg flex flex-1 flex-col justify-center p-8">
         <div className="sm:mx-auto sm:w-full sm:max-w-sm">
           <img
