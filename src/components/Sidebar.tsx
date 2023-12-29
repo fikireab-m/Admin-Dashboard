@@ -9,12 +9,7 @@ import help from "../assets/icons/help.svg"
 import feedback from "../assets/icons/feedback.svg"
 import logout from "../assets/icons/logout.svg"
 import heartlock from '../assets/hearlock.svg';
-// type SideBarProp = {
-//     menuItems: [{
-//         title: string,
-//         icon: string
-//     }]
-// }
+import { motion } from "framer-motion"
 const sideBarItems = [
     {
         menuTitle: "Dashboard",
@@ -64,7 +59,10 @@ const sideBarItems = [
 ]
 const Sidebar = (): JSX.Element => {
     return (
-        <div className="bottom-0 min-h-screen fixed">
+        <motion.div className="bottom-0 min-h-screen fixed"
+            initial={{ x: -200, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{ duration: 1.0 }}>
             <aside className="shadow-xl min-h-screen rounded-lg dark:border-gray-700 z-20 md:w-64 overflow-y-auto bg-white flex-shrink-0">
                 <div className="py-4 text-gray-700 ">
                     <div className="md:hidden absolute z-30 w-16 top-2 bottom-2 left-2 flex flex-col bg-gradient-to-r from-gray-100 to-white rounded-full shadow-xl">
@@ -149,7 +147,7 @@ const Sidebar = (): JSX.Element => {
 
                 </div>
             </aside>
-        </div>
+        </motion.div>
     )
 }
 

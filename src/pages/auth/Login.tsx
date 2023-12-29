@@ -1,12 +1,15 @@
+import { motion } from "framer-motion"
 import google from "../../assets/icons/google.svg"
 type LoginProp = {
     callback: React.Dispatch<React.SetStateAction<boolean>>
 }
 const Login: React.FC<LoginProp> = ({ callback }) => {
     return (
-        <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
+        <motion.div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm"
+        initial={{scale:0.5,opacity:0}}
+        animate = {{scale:1,opacity:1}}
+        transition={{duration:1.0}}>
             <div className="space-y-4">
-
                 <div className="mt-2">
                     <input
                         id="email"
@@ -60,7 +63,7 @@ const Login: React.FC<LoginProp> = ({ callback }) => {
                     Sign Up
                 </button>
             </p>
-        </div>
+        </motion.div>
 
     )
 }
