@@ -10,6 +10,7 @@ import feedback from "../assets/icons/feedback.svg"
 import logout from "../assets/icons/logout.svg"
 import heartlock from '../assets/hearlock.svg';
 import { motion } from "framer-motion"
+import { useState } from "react"
 const sideBarItems = [
     {
         menuTitle: "Dashboard",
@@ -58,6 +59,10 @@ const sideBarItems = [
     },
 ]
 const Sidebar = (): JSX.Element => {
+    const [activeIndex, setActiveIndex] = useState(0);
+    const changeIndex=(i:number)=>{
+        setActiveIndex(i);
+    }
     return (
         <motion.div className="bottom-0 min-h-screen fixed"
             initial={{ x: -200, opacity: 0 }}
@@ -114,10 +119,10 @@ const Sidebar = (): JSX.Element => {
                         {
                             sideBarItems.map((item, index) => (
                                 <>
-                                    <a
+                                    <span onClick={()=>changeIndex(index)}
                                         key={index}
-                                        className="ml-2 py-2 p2-4 flex items-center w-full rounded-md transitions duration-150 hover:text-gray-800 hover:bg-purple-100 hover:scale-105"
-                                        href={item.url}
+                                        className={`py-2 px-4 flex items-center w-full rounded-md transitions duration-150 hover:text-gray-800 ${index===activeIndex?"bg-pink-300":""} hover:bg-purple-100 hover:scale-105`}
+                                        // to={item.url}
                                     >
                                         <img
                                             className="w-6 h-6 mr-4"
@@ -127,7 +132,7 @@ const Sidebar = (): JSX.Element => {
                                         <span className="text-md font-semibold text-gray-800 ">
                                             {item.menuTitle}
                                         </span>
-                                    </a>
+                                    </span>
                                     {
                                         index < 7 ? <hr /> : ""
                                     }
