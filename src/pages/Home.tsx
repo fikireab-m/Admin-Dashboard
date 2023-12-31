@@ -4,7 +4,7 @@ import users from "../assets/icons/users_white.svg"
 const Home = (): JSX.Element => {
   return (
     <Layout title="Kimem/Dashboard">
-      <div className="my-6 mx-2 shadow-xl h-full flex flex-col flex-1 bg-gray-100 rounded-lg">
+      <div className="my-6 mx-2 shadow-xl h-full flex flex-col flex-1">
         <main className="h-full pb-16 overflow-y-auto">
           <div className="container grid px-6 mx-auto">
             <div className="grid gap-6 mb-8 md:grid-cols-2 xl:grid-cols-4">
