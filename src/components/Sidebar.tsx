@@ -1,9 +1,7 @@
 import home from "../assets/icons/home.svg"
 import users from "../assets/icons/users.svg"
 import premium from "../assets/icons/king.svg"
-import ranking from "../assets/icons/ranking.svg"
 import analytics from "../assets/icons/analytics.svg"
-import regFlow from "../assets/icons/widgets.svg"
 import settings from "../assets/icons/settings.svg"
 import help from "../assets/icons/help.svg"
 import feedback from "../assets/icons/feedback.svg"
@@ -29,19 +27,9 @@ const sideBarItems = [
         url: "/plans"
     },
     {
-        menuTitle: "Custom plans",
-        icon: ranking,
-        url: "/plans/custom"
-    },
-    {
         menuTitle: "Analytics",
         icon: analytics,
         url: "/analytics"
-    },
-    {
-        menuTitle: "Registration Flow",
-        icon: regFlow,
-        url: "/ui"
     },
     {
         menuTitle: "Settings",
