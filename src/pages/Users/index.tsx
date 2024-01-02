@@ -149,11 +149,12 @@ const Users = (): JSX.Element => {
                                     </td>
 
                                     <td className="px-4 py-3 text-xs">
-                                        <span
+                                        {user.lastSeen !== null &&
+                                            <span
                                             className={`px-2 py-1 font-semibold leading-tight  bg-gray-200 text-green-700 rounded-full `}
                                         >
-                                            {user.lastSeen === null ? "" : user.lastSeen}
-                                        </span>
+                                            {user.lastSeen}
+                                        </span>}
                                     </td>
 
                                     <td className="px-4 py-3">
