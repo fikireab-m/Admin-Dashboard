@@ -21,9 +21,8 @@ const Analytics = () => {
             Active Users
           </h1>
           <h1 className="text-3xl mx-5">25</h1>
-
           <div className="flex justify-end mx-5">
-            <select className="bg-transparent text-sm">
+            <select className="bg-transparent text-sm outline-0 border-0">
               <option value=">18" className={`bg-[#9D4993]`}>
                 18 - 25
               </option>
@@ -44,7 +43,7 @@ const Analytics = () => {
           </h1>
           <h1 className="text-3xl mx-5">25</h1>
           <div className="flex justify-end mx-5">
-            <select className="bg-transparent text-sm">
+            <select className="bg-transparent text-sm outline-0 border-0">
               <option value=">18" className={`bg-[#8173C3]`}>
                 18 - 25
               </option>
@@ -65,7 +64,7 @@ const Analytics = () => {
           </h1>
           <h1 className="text-3xl mx-5">25</h1>
           <div className="flex justify-end mx-5">
-            <select className="bg-transparent text-sm">
+            <select className="bg-transparent text-sm outline-0 border-0">
               <option value=">18" className={`bg-[#60A4F9]`}>
                 18 - 25
               </option>
