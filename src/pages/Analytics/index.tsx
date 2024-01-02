@@ -10,7 +10,7 @@ const Analytics = () => {
   const [tab, setTab] = useState(0);
 
   return (
-    <Layout title="Analytics" index={3}>
+    <Layout title="Kimem/Analytics" index={3}>
       <section
         id="summary-cards"
         className="flex flex-wrap flex-grow justify-center gap-10 px-10 mt-5 text-white"
