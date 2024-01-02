@@ -5,11 +5,12 @@ import Sidebar from './Sidebar'
 type LayoutProp = {
   children: ReactNode
   title?: string
+  index:number
 }
-const Layout: React.FC<LayoutProp> = ({ title = "Kimem Admin", children }): JSX.Element => {
+const Layout: React.FC<LayoutProp> = ({ title = "Kimem Admin", index, children }): JSX.Element => {
   return (
     <div className="w-full flex bg-gray-100">
-      <Sidebar />
+      <Sidebar activeIndex = {index}/>
       <>
         <Header title={title} />
         <div className="w-full ml-16 mt-20 md:ml-64">

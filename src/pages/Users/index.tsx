@@ -86,7 +86,7 @@ const Users = (): JSX.Element => {
     }
 
     return (
-        <Layout title="Kimem/Users" >
+        <Layout title="Kimem/Users"  index={1}>
 
             <div className="m-4 shadow-xl min-h-full rounded-lg bg-gray-100">
                 <div className="w-full overflow-x-auto">
