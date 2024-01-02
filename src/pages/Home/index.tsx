@@ -1,5 +1,5 @@
 import Layout from "../../components/Layout"
-import users from "../assets/icons/users_white.svg"
+import users from "../../assets/icons/users_white.svg"
 
 const Home = (): JSX.Element => {
   return (
