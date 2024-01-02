@@ -9,9 +9,7 @@ function App() {
   return (
     <Router>
       <Routes>
-
         <Route path="/auth" element={<Auth />} />
-
         <Route element={<ProtectedRoutes />}>
           <Route path="/" element={<Home />} />
           <Route path="/users" element={<Users />} />

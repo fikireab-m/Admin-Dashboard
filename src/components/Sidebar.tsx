@@ -9,7 +9,7 @@ import logout from "../assets/icons/logout.svg"
 import heartlock from '../assets/hearlock.svg';
 import { motion } from "framer-motion"
 import { useState } from "react"
-import { NavLink } from "react-router-dom"
+import { Link } from "react-router-dom"
 const sideBarItems = [
     {
         menuTitle: "Dashboard",
@@ -24,7 +24,7 @@ const sideBarItems = [
     {
         menuTitle: "Subscriptions",
         icon: premium,
-        url: "/plans"
+        url: ""
     },
     {
         menuTitle: "Analytics",
@@ -49,9 +49,7 @@ const sideBarItems = [
 ]
 const Sidebar = (): JSX.Element => {
     const [activeIndex, setActiveIndex] = useState(0);
-    const changeIndex = (i: number) => {
-        setActiveIndex(i);
-    }
+
     return (
         <motion.div className="bottom-0 min-h-screen fixed"
             initial={{ x: -200, opacity: 0 }}
@@ -61,7 +59,7 @@ const Sidebar = (): JSX.Element => {
                 <div className="py-4 text-gray-700 ">
                     <div className="md:hidden absolute z-30 w-16 top-2 bottom-2 left-2 flex flex-col bg-gradient-to-r from-gray-100 to-white rounded-full shadow-xl">
                         <div className="mb-2 p-4">
-                            <NavLink
+                            <Link
                                 to="/"
                                 className="flex items-center transition duration-200 transform hover:scale-105"
                             >
@@ -70,13 +68,13 @@ const Sidebar = (): JSX.Element => {
                                     alt="pleasurebee logo"
                                     className="rounded-full w-12 h-12 shadow-md"
                                 />
-                            </NavLink>
+                            </Link>
                         </div>
                         <hr />
                         <div className="mb-2" />
                         {
                             sideBarItems.map((item) => (
-                                <NavLink
+                                <Link
                                     key={item.menuTitle}
                                     to={item.url}
                                     className="inline-flex items-center px-4 py-3 transition duration-200 transform hover:scale-105"
@@ -86,13 +84,13 @@ const Sidebar = (): JSX.Element => {
                                         src={item.icon}
                                         alt={item.menuTitle}
                                     />
-                                </NavLink>
+                                </Link>
                             ))
                         }
                     </div>
                     <div className="px-2 pt-8 hidden md:block">
                         <div className="mb-4 px-4 ">
-                            <NavLink
+                            <Link
                                 to="/"
                                 className="flex items-center transition duration-200 transform hover:scale-105"
                             >
@@ -102,13 +100,13 @@ const Sidebar = (): JSX.Element => {
                                     className="rounded-full w-12 h-12 shadow-md mr-4"
                                 />
                                 <h1 className="hidden md:block font-black text-4xl">Kimem</h1>
-                            </NavLink>
+                            </Link>
                         </div>
                         <hr />
                         {
                             sideBarItems.map((item, index) => (
                                 <>
-                                    <NavLink onClick={() => changeIndex(index)}
+                                    <Link onClick={()=>setActiveIndex(index)}
                                         key={index}
                                         className={`py-2 px-4 flex items-center w-full rounded-md transitions duration-150 hover:text-gray-800 ${index === activeIndex ? "bg-pink-300" : ""} hover:bg-purple-100 hover:scale-105`}
                                         to={item.url}
@@ -121,7 +119,7 @@ const Sidebar = (): JSX.Element => {
                                         <span className="text-md font-semibold text-gray-800 ">
                                             {item.menuTitle}
                                         </span>
-                                    </NavLink>
+                                    </Link>
                                     {
                                         index < 7 ? <hr /> : ""
                                     }
