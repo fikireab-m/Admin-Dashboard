@@ -73,6 +73,9 @@ const Home = (): JSX.Element => {
               <div className="p-1 rounded-md shadow-xl bg-white">
                 <SimpleLineChart titleText="" />
               </div>
+              <div className="p-1 rounded-md shadow-xl bg-white">
+                <SimpleLineChart titleText="" />
+              </div>
             </div>
           </div>
         </main>
