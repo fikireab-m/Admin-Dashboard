@@ -1,5 +1,7 @@
-import GoogleMapReact from "google-map-react";
+import GoogleMapReact from "google-map-react"
 
+const apiKey = import.meta.env.VITE_MAP_API_KEY
+console.log(apiKey)
 const Map = ({
   location,
   zoomLevel,
@@ -9,7 +11,7 @@ const Map = ({
 }) => (
   <div className="h-96 w-full">
     <GoogleMapReact
-      bootstrapURLKeys={{ key: import.meta.env.MAP_API_KEY }}
+      bootstrapURLKeys={{ key: apiKey }}
       defaultCenter={location}
       defaultZoom={zoomLevel}
     >

@@ -110,7 +110,7 @@ const Analytics = () => {
         </ul>
 
         <div className="mb-6">
-          <div className="w-full grid gap-6 mb-8 lg:grid-cols-2 items-center">
+          <div className="w-full grid gap-6 mb-8 grid-cols-1 lg:grid-cols-2 items-center">
             <div className="opacity-100 transition-opacity duration-150 ease-linear">
               <PieChart titleText="" legendOrientation="bottom" />
             </div>

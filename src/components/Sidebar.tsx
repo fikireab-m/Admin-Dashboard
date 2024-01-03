@@ -106,9 +106,8 @@ const Sidebar = ({activeIndex}:SidebarProp): JSX.Element => {
                         <hr />
                         {
                             sideBarItems.map((item, index) => (
-                                <>
+                                <div key={index}>
                                     <Link
-                                        key={index}
                                         className={`py-2 px-4 flex items-center w-full transitions duration-150 hover:text-gray-800 ${index === activeIndex ? "bg-pink-200" : ""} hover:bg-purple-100 hover:scale-105`}
                                         to={item.url}
                                     >
@@ -124,7 +123,7 @@ const Sidebar = ({activeIndex}:SidebarProp): JSX.Element => {
                                     {
                                         index < 7 ? <hr /> : ""
                                     }
-                                </>
+                                </div>
                             ))
                         }
                         <button
