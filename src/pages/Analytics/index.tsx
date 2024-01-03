@@ -5,6 +5,7 @@ import Layout from "../../components/Layout";
 import { BiUserCheck } from "react-icons/bi";
 import { BiUserMinus } from "react-icons/bi";
 import { MdWorkspacePremium } from "react-icons/md";
+import SimpleBarChart from "../../components/charts/BarChart";
 
 const Analytics = () => {
   const [tab, setTab] = useState(0);
@@ -107,7 +108,15 @@ const Analytics = () => {
           </li>
         </ul>
 
-
+        <div className="mb-6">
+          <div
+            className={`opacity-100 transition-opacity duration-150 ease-linear ${
+              tab === 0 ? "block" : "hidden"
+            }`}
+          >
+            <SimpleBarChart titleText="" />
+          </div>
+        </div>
       </section>
 
       <section className="w-[92%] mb-10 bg-gradient-to-b from-transparent from-[5%] to-white to-50% shadow-sm rounded-xl mx-5">
