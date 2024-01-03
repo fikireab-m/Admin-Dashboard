@@ -15,7 +15,6 @@ function App() {
           <Route path="/users" element={<Users />} />
           <Route path="/analytics" element={<Analytics />} />
         </Route>
-
       </Routes>
     </Router>
   );
