@@ -7,6 +7,8 @@ import { BiUserMinus } from "react-icons/bi";
 import { MdWorkspacePremium } from "react-icons/md";
 import SimpleBarChart from "../../components/charts/BarChart";
 import Map from "../../components/Map";
+import SimpleLineChart from "../../components/charts/SimpleLineChart";
+import PieChart from "../../components/charts/PieChart";
 
 const Analytics = () => {
   const [tab, setTab] = useState(0);
@@ -89,9 +91,8 @@ const Analytics = () => {
         >
           <li role="presentation">
             <a
-              className={`cursor-pointer my-2 block border-x-0 border-b-2 border-t-0 ${
-                tab === 0 ? "border-blue-500" : "border-transparent"
-              } px-7 pb-3.5 pt-4 text-xs font-medium uppercase leading-tight text-neutral-500`}
+              className={`cursor-pointer my-2 block border-x-0 border-b-2 border-t-0 ${tab === 0 ? "border-blue-500" : "border-transparent"
+                } px-7 pb-3.5 pt-4 text-xs font-medium uppercase leading-tight text-neutral-500`}
               onClick={() => setTab(0)}
             >
               Chart
@@ -99,9 +100,8 @@ const Analytics = () => {
           </li>
           <li role="presentation">
             <a
-              className={`cursor-pointer my-2 block border-x-0 border-b-2 border-t-0 ${
-                tab === 1 ? "border-blue-500" : "border-transparent"
-              } px-7 pb-3.5 pt-4 text-xs font-medium uppercase leading-tight text-neutral-500`}
+              className={`cursor-pointer my-2 block border-x-0 border-b-2 border-t-0 ${tab === 1 ? "border-blue-500" : "border-transparent"
+                } px-7 pb-3.5 pt-4 text-xs font-medium uppercase leading-tight text-neutral-500`}
               onClick={() => setTab(1)}
             >
               Map
@@ -110,17 +110,28 @@ const Analytics = () => {
         </ul>
 
         <div className="mb-6">
-          <div
-            className={`opacity-100 transition-opacity duration-150 ease-linear ${
-              tab === 0 ? "block" : "hidden"
-            }`}
-          >
-            <SimpleBarChart titleText="" />
+          <div className="w-full grid gap-6 mb-8 lg:grid-cols-2 items-center">
+            <div className="opacity-100 transition-opacity duration-150 ease-linear">
+              <PieChart titleText="" legendOrientation="bottom" />
+            </div>
+            <div>
+              <div className="opacity-100 transition-opacity duration-150 ease-linear">
+                <SimpleBarChart titleText="" />
+              </div>
+              <div className="opacity-100 transition-opacity duration-150 ease-linear">
+                <SimpleLineChart titleText="" />
+              </div>
+            </div>
+            <div className="opacity-100 transition-opacity duration-150 ease-linear">
+              <SimpleLineChart titleText="" />
+            </div>
+            <div className="opacity-100 transition-opacity duration-150 ease-linear">
+              <SimpleBarChart titleText="" />
+            </div>
           </div>
           <div
-            className={`transition-opacity duration-150 ease-linear ${
-              tab === 1 ? "block" : "hidden"
-            }`}
+            className={`transition-opacity duration-150 ease-linear ${tab === 1 ? "block" : "hidden"
+              }`}
           >
             <Map
               location={{

@@ -67,14 +67,16 @@ const Home = (): JSX.Element => {
                 </div>
               </div>
             </div>
-            <div className="w-full grid gap-6 mb-8 md:grid-cols-2 xl:grid-cols-3 items-center">
-              <div className="p-1 rounded-md shadow-xl bg-white">
-                <SimpleBarChart titleText="" />
+            <div className="w-full grid gap-6 mb-8 lg:grid-cols-2 items-center">
+              <div>
+                <div className="opacity-100 transition-opacity duration-150 ease-linear">
+                  <SimpleBarChart titleText="" />
+                </div>
+                <div className="opacity-100 transition-opacity duration-150 ease-linear">
+                  <SimpleLineChart titleText="" />
+                </div>
               </div>
-              <div className="p-1 rounded-md shadow-xl bg-white">
-                <SimpleLineChart titleText="" />
-              </div>
-              <div className="p-1 rounded-md shadow-xl bg-white">
+              <div className="opacity-100 transition-opacity duration-150 ease-linear">
                 <PieChart titleText="" legendOrientation="bottom" />
               </div>
             </div>

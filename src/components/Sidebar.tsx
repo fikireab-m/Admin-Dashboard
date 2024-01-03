@@ -97,10 +97,10 @@ const Sidebar = ({activeIndex}:SidebarProp): JSX.Element => {
                             >
                                 <img
                                     src={heartlock}
-                                    alt="pleasurebee logo"
+                                    alt="kimem logo"
                                     className="rounded-full w-12 h-12 shadow-md mr-4"
                                 />
-                                <h1 className="hidden md:block font-black text-4xl">Kimem</h1>
+                                <h1 className="hidden md:block font-black text-4xl text-gray-500">Kimem</h1>
                             </Link>
                         </div>
                         <hr />
