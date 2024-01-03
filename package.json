@@ -13,6 +13,7 @@
     "@faker-js/faker": "^8.3.1",
     "chart.js": "^4.4.1",
     "framer-motion": "^10.16.16",
+    "google-map-react": "^2.2.1",
     "react": "^18.2.0",
     "react-chartjs-2": "^5.2.0",
     "react-dom": "^18.2.0",
@@ -20,6 +21,7 @@
     "react-router-dom": "^6.21.1"
   },
   "devDependencies": {
+    "@types/google-map-react": "^2.1.10",
     "@types/react": "^18.2.43",
     "@types/react-dom": "^18.2.17",
     "@typescript-eslint/eslint-plugin": "^6.14.0",

@@ -6,6 +6,7 @@ import { BiUserCheck } from "react-icons/bi";
 import { BiUserMinus } from "react-icons/bi";
 import { MdWorkspacePremium } from "react-icons/md";
 import SimpleBarChart from "../../components/charts/BarChart";
+import Map from "../../components/Map";
 
 const Analytics = () => {
   const [tab, setTab] = useState(0);
@@ -115,6 +116,20 @@ const Analytics = () => {
             }`}
           >
             <SimpleBarChart titleText="" />
+          </div>
+          <div
+            className={`transition-opacity duration-150 ease-linear ${
+              tab === 1 ? "block" : "hidden"
+            }`}
+          >
+            <Map
+              location={{
+                address: "Addis Ababa, Ethiopia",
+                lat: 9.0192,
+                lng: 38.7525,
+              }}
+              zoomLevel={7}
+            />
           </div>
         </div>
       </section>
