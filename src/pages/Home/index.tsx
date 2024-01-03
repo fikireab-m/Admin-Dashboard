@@ -3,6 +3,8 @@ import users from "../../assets/icons/users_white.svg"
 import matchesIcon from "../../assets/icons/joined_hearts.svg"
 import userFavorite from "../../assets/icons/user_favorite.svg"
 import userPlus from "../../assets/icons/user_plus.svg"
+import SimpleBarChart from "../../components/charts/BarChart"
+import SimpleLineChart from "../../components/charts/SimpleLineChart"
 
 const Home = (): JSX.Element => {
   return (
@@ -63,6 +65,12 @@ const Home = (): JSX.Element => {
                   <p className="text-lg font-semibold text-gray-700 ">500+</p>
                 </div>
               </div>
+            </div>
+            <div className="w-full grid gap-6 mb-8 md:grid-cols-2 xl:grid-cols-3 items-center">
+              <div className="p-1 rounded-md shadow-xl bg-white">
+                <SimpleBarChart titleText="" />
+              </div>
+              
             </div>
           </div>
         </main>
