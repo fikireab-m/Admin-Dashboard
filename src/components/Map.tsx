@@ -9,7 +9,7 @@ const Map = ({
 }) => (
   <div className="h-96 w-full">
     <GoogleMapReact
-      bootstrapURLKeys={{ key: "AIzaSyAAKRoc5D0hZv0BmpDuOLHL3n98Zm5CA0E" }}
+      bootstrapURLKeys={{ key: import.meta.env.MAP_API_KEY }}
       defaultCenter={location}
       defaultZoom={zoomLevel}
     >
@@ -21,4 +21,4 @@ const Map = ({
   </div>
 );
 
-export default Map;
+export default Map
