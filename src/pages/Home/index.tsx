@@ -5,6 +5,7 @@ import userFavorite from "../../assets/icons/user_favorite.svg"
 import userPlus from "../../assets/icons/user_plus.svg"
 import SimpleBarChart from "../../components/charts/BarChart"
 import SimpleLineChart from "../../components/charts/SimpleLineChart"
+import PieChart from "../../components/charts/PieChart"
 
 const Home = (): JSX.Element => {
   return (
@@ -74,7 +75,7 @@ const Home = (): JSX.Element => {
                 <SimpleLineChart titleText="" />
               </div>
               <div className="p-1 rounded-md shadow-xl bg-white">
-                <SimpleLineChart titleText="" />
+                <PieChart titleText="" legendOrientation="bottom" />
               </div>
             </div>
           </div>
