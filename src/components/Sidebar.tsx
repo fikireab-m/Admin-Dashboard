@@ -93,8 +93,7 @@ const Sidebar = ({activeIndex}:SidebarProp): JSX.Element => {
                         <div className="mb-4 px-4 ">
                             <Link
                                 to="/"
-                                className="flex items-center transition duration-200 transform hover:scale-105"
-                            >
+                                className="flex items-center transition duration-200 transform hover:scale-105">
                                 <img
                                     src={heartlock}
                                     alt="kimem logo"

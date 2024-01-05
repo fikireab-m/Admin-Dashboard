@@ -1,86 +1,40 @@
 import { useState } from "react";
 import Layout from "../../components/Layout";
 
-//Icons
-import { BiUserCheck } from "react-icons/bi";
-import { BiUserMinus } from "react-icons/bi";
-import { MdWorkspacePremium } from "react-icons/md";
 import SimpleBarChart from "../../components/charts/BarChart";
 import Map from "../../components/Map";
 import SimpleLineChart from "../../components/charts/SimpleLineChart";
 import PieChart from "../../components/charts/PieChart";
+import Card from "../../components/Card";
 
 const Analytics = () => {
   const [tab, setTab] = useState(0);
-
+  const usersCat = ["Active Users", "Subscriptions", "Deleted Users"]
   return (
     <Layout title="Kimem/Analytics" index={3}>
       <section
         id="summary-cards"
         className="flex flex-wrap flex-grow justify-center gap-10 px-10 mt-5 text-white"
       >
-        <div className="bg-gradient-to-r from-[#BE195E] to-[#9D4993] w-[280px] h-28 rounded-xl">
-          <h1 className="m-3 text-sm flex items-center gap-3">
-            <BiUserCheck size={25} />
-            Active Users
-          </h1>
-          <h1 className="text-3xl mx-5">25</h1>
-          <div className="flex justify-end mx-5">
-            <select className="bg-transparent text-sm outline-0 border-0">
-              <option value=">18" className={`bg-[#9D4993]`}>
-                18 - 25
-              </option>
-              <option value=">18" className={`bg-[#9D4993]`}>
-                26 - 40
-              </option>
-              <option value=">18" className={`bg-[#9D4993]`}>
-                {"41 > "}
-              </option>
-            </select>
-          </div>
-        </div>
-
-        <div className="bg-gradient-to-r from-[#9B4C97] to-[#8173C3] w-[280px] h-28 rounded-xl">
-          <h1 className="m-3 text-sm flex items-center gap-3">
-            <MdWorkspacePremium size={25} />
-            Subscriptions
-          </h1>
-          <h1 className="text-3xl mx-5">25</h1>
-          <div className="flex justify-end mx-5">
-            <select className="bg-transparent text-sm outline-0 border-0">
-              <option value=">18" className={`bg-[#8173C3]`}>
-                18 - 25
-              </option>
-              <option value=">18" className={`bg-[#8173C3]`}>
-                26 - 40
-              </option>
-              <option value=">18" className={`bg-[#8173C3]`}>
-                {"41 > "}
-              </option>
-            </select>
-          </div>
-        </div>
-
-        <div className="bg-gradient-to-r from-[#8076C6] to-[#60A4F9] w-[280px] h-28 rounded-xl">
-          <h1 className="m-3 text-sm flex gap-3 items-center">
-            <BiUserMinus size={25} />
-            Deleted Users
-          </h1>
-          <h1 className="text-3xl mx-5">25</h1>
-          <div className="flex justify-end mx-5">
-            <select className="bg-transparent text-sm outline-0 border-0">
-              <option value=">18" className={`bg-[#60A4F9]`}>
-                18 - 25
-              </option>
-              <option value=">18" className={`bg-[#60A4F9]`}>
-                26 - 40
-              </option>
-              <option value=">18" className={`bg-[#60A4F9]`}>
-                {"41 > "}
-              </option>
-            </select>
-          </div>
-        </div>
+        {
+          usersCat.map((cat, index) => (
+            <Card key={index} title={cat}>
+              <div className="flex justify-end mx-5">
+                <select className="bg-transparent text-sm outline-0 border-0">
+                  <option value=">18" className={`bg-[#60A4F9]`}>
+                    18 - 25
+                  </option>
+                  <option value=">18" className={`bg-[#60A4F9]`}>
+                    26 - 40
+                  </option>
+                  <option value=">18" className={`bg-[#60A4F9]`}>
+                    {"41 > "}
+                  </option>
+                </select>
+              </div>
+            </Card>
+          ))
+        }
       </section>
 
       <section className=" mb-10 mx-10">
@@ -110,7 +64,8 @@ const Analytics = () => {
         </ul>
 
         <div className="mb-6">
-          <div className="w-full grid gap-6 mb-8 grid-cols-1 lg:grid-cols-2 items-center">
+          <div className={`w-full grid gap-6 mb-8 grid-cols-1 lg:grid-cols-2 items-center ${tab === 0 ? "block" : "hidden"
+            }`}>
             <div className="opacity-100 transition-opacity duration-150 ease-linear">
               <PieChart titleText="" legendOrientation="bottom" />
             </div>
