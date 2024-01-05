@@ -18,7 +18,7 @@ const Analytics = () => {
       >
         {
           usersCat.map((cat, index) => (
-            <Card key={index} title={cat}>
+            <Card key={index} title={cat} amount={25}>
               <div className="flex justify-end mx-5">
                 <select className="bg-transparent text-sm outline-0 border-0">
                   <option value=">18" className={`bg-[#60A4F9]`}>
