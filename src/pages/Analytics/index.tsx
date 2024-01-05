@@ -8,8 +8,14 @@ import PieChart from "../../components/charts/PieChart";
 import Card from "../../components/Card";
 
 const Analytics = () => {
-  const [tab, setTab] = useState(0);
+  const [tab, setTab] = useState(0)
   const usersCat = ["Active Users", "Subscriptions", "Deleted Users"]
+
+  const generateRand = (i:number):number => {
+    const amount = Math.floor(Math.random() * i)
+    return amount
+  }
+
   return (
     <Layout title="Kimem/Analytics" index={3}>
       <section
@@ -18,7 +24,7 @@ const Analytics = () => {
       >
         {
           usersCat.map((cat, index) => (
-            <Card key={index} title={cat} amount={25}>
+            <Card key={index} title={cat} amount={generateRand(35)}>
               <div className="flex justify-end mx-5">
                 <select className="bg-transparent text-sm outline-0 border-0">
                   <option value=">18" className={`bg-[#60A4F9]`}>
