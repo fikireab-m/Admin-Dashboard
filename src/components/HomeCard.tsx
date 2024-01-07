@@ -1,4 +1,5 @@
 type HomeCardProp = {
+    title:string,
     imgUrl:string,
 }
 const HomeCard:React.FC<HomeCardProp> = ({imgUrl}) => {

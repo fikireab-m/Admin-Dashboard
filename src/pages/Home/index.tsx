@@ -10,6 +10,7 @@ import HomeCard from "../../components/HomeCard"
 
 const Home = (): JSX.Element => {
   const imgUrls = [users, matchesIcon, userPlus, userFavorite]
+  const usersCat = ["Total Users","New Matches","New Users", "Active Users"]
   return (
     <Layout title="Kimem/Dashboard" index={0}>
       <div className="my-6 mx-2 h-full flex flex-col flex-1">
@@ -18,48 +19,9 @@ const Home = (): JSX.Element => {
             <div className="grid gap-6 mb-8 md:grid-cols-2 xl:grid-cols-4">
               {
                 imgUrls.map((imgUrl, index) => (
-                  <HomeCard key={index} imgUrl={imgUrl} />
+                  <HomeCard key={index} imgUrl={imgUrl} title = {usersCat[index]}/>
                 ))
               }
-              <div className="flex items-center p-2 bg-white rounded-lg shadow-md ">
-                <div className="p-3 mr-4 bg-gradient-to-r from-pink-700 to-purple-700 rounded-full shadow-lg">
-                  <img src={matchesIcon} alt="matches icon" />
-                </div>
-                <div>
-                  <p className="mb-2 text-sm font-medium text-gray-600 ">
-                    New Matches
-                  </p>
-                  <p className="text-lg font-semibold text-gray-700 ">
-                    200 +
-                  </p>
-                </div>
-                H</div>
-
-              <div className="flex items-center p-2 bg-white rounded-lg shadow-md ">
-                <div className="p-3 mr-4 bg-gradient-to-r from-pink-700 to-blue-400 rounded-full dark:text-blue-100 dark:bg-blue-500 shadow-lg">
-                  <img src={userPlus} alt="user plus icon" />
-                </div>
-                <div>
-                  <p className="mb-2 text-sm font-medium text-gray-600 ">
-                    New Users
-                  </p>
-                  <p className="text-lg font-semibold text-gray-700 ">
-                    500 +
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex items-center p-2 bg-white rounded-lg shadow-md">
-                <div className="p-3 mr-4 bg-gradient-to-r from-purple-700 to-blue-500 rounded-full shadow-lg">
-                  <img src={userFavorite} alt="user favorite" />
-                </div>
-                <div>
-                  <p className="mb-2 text-sm font-medium text-gray-600 ">
-                    Active users
-                  </p>
-                  <p className="text-lg font-semibold text-gray-700 ">500+</p>
-                </div>
-              </div>
             </div>
             <div className="w-full grid gap-6 mb-8 lg:grid-cols-2 items-center">
               <div>
