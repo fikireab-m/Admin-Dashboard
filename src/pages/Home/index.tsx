@@ -6,27 +6,21 @@ import userPlus from "../../assets/icons/user_plus.svg"
 import SimpleBarChart from "../../components/charts/BarChart"
 import SimpleLineChart from "../../components/charts/SimpleLineChart"
 import PieChart from "../../components/charts/PieChart"
+import HomeCard from "../../components/HomeCard"
 
 const Home = (): JSX.Element => {
+  const imgUrls = [users, matchesIcon, userPlus, userFavorite]
   return (
     <Layout title="Kimem/Dashboard" index={0}>
       <div className="my-6 mx-2 h-full flex flex-col flex-1">
         <main className="h-full pb-16 overflow-y-auto">
           <div className="container grid px-6 mx-auto">
             <div className="grid gap-6 mb-8 md:grid-cols-2 xl:grid-cols-4">
-              <div className="flex items-center p-2 bg-white rounded-lg shadow-md ">
-                <div className="p-3 mr-4 bg-gradient-to-r from-pink-700 to-pink-600 rounded-full shadow-lg">
-                  <img src={users} alt="users icon" />
-                </div>
-                <div>
-                  <p className="mb-2 text-sm font-medium text-gray-600 ">
-                    Total Users
-                  </p>
-                  <p className="text-lg font-semibold text-gray-700 ">
-                    1200 +
-                  </p>
-                </div>
-              </div>
+              {
+                imgUrls.map((imgUrl, index) => (
+                  <HomeCard key={index} imgUrl={imgUrl} />
+                ))
+              }
               <div className="flex items-center p-2 bg-white rounded-lg shadow-md ">
                 <div className="p-3 mr-4 bg-gradient-to-r from-pink-700 to-purple-700 rounded-full shadow-lg">
                   <img src={matchesIcon} alt="matches icon" />
@@ -39,7 +33,7 @@ const Home = (): JSX.Element => {
                     200 +
                   </p>
                 </div>
-              </div>
+                H</div>
 
               <div className="flex items-center p-2 bg-white rounded-lg shadow-md ">
                 <div className="p-3 mr-4 bg-gradient-to-r from-pink-700 to-blue-400 rounded-full dark:text-blue-100 dark:bg-blue-500 shadow-lg">
