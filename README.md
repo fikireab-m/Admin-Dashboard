@@ -1,30 +1,17 @@
-# React + TypeScript + Vite
+# Kimem Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A multi-purpose admin dashboard
 
-Currently, two official plugins are available:
+## Main tech-stacks
+<div>
+<a href="https://www.typescriptlang.org/" target="_blank" style="text-decoration:none; padding-right: 4px; background-color: #f0ffff77; border-radius: 4px;">
+    <img src="https://github.com/devicons/devicon/blob/master/icons/typescript/typescript-plain.svg" title="Typescript"  alt="Typescript" width="40" height="40"/>
+</a>&nbsp;
+<a href="https://react.dev/" target="_blank" style="text-decoration:none; padding-right: 4px; background-color: #f0ffff77; border-radius: 4px;">
+    <img src="https://github.com/devicons/devicon/blob/master/icons/react/react-original-wordmark.svg" title="React" alt="React" width="40" height="40"/>  
+ </a>&nbsp;
+ <a href="https://www.android.com/" target="_blank" style="text-decoration:none; padding-right: 4px; background-color: #f0ffff77; border-radius: 4px;">
+    <img src="https://github.com/devicons/devicon/blob/master/icons/tailwindcss/tailwindcss-plain.svg" title="tailwindcss" alt="tailwindcss" width="40" height="40"/>
+</a>&nbsp;
+</div>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
