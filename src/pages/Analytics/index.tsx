@@ -21,7 +21,7 @@ const Analytics = () => {
       >
         {
           usersCat.map((cat, index) => (
-            <Card key={index} title={cat} amount={generateRand(35, 5)}/>
+            <Card key={index} title={cat} amount={generateRand(150, 500)}/>
           ))
         }
       </section>
