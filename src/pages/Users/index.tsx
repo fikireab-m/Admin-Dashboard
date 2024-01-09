@@ -94,7 +94,7 @@ const Users = (): JSX.Element => {
                         <thead>
                             <tr className="text-xs font-semibold tracking-wide text-left text-gray-700 uppercase border-b border-purple-700 bg-gradient-to-b from-white to-gray-200">
                                 <th className="px-4 py-3">User</th>
-                                <th className="px-4 py-3">Phone</th>
+                                <th className="px-4 py-3">Email</th>
                                 <th className="px-4 py-3">Status</th>
                                 <th className="px-4 py-3">Subscription</th>
                                 <th className="px-4 py-3">Last seen</th>

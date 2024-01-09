@@ -16,7 +16,7 @@ A multi-purpose admin dashboard
 </div>
 
 ##
-<img src="src/assets/images/images1.PNG"/>
+<img src="src/assets/images/image1.PNG"/>
 <img src="src/assets/images/image2.PNG"/>
 <img src="src/assets/images/image3.PNG"/>
 
