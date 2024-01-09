@@ -15,3 +15,20 @@ A multi-purpose admin dashboard
 </a>&nbsp;
 </div>
 
+## Getting started
+- Clone the repo
+```git
+git clone https://github.com/fikireab-m/Kimem-Dashboard.git
+```
+- Install the dependencies
+```npm
+npm i
+```
+- Run the app 
+```npm
+npm run dev
+```
+- Build your app
+```npm
+npm run build
+```
