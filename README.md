@@ -15,6 +15,11 @@ A multi-purpose admin dashboard
 </a>&nbsp;
 </div>
 
+##
+<img src="src/assets/images/images1.PNG"/>
+<img src="src/assets/images/image2.PNG"/>
+<img src="src/assets/images/image3.PNG"/>
+
 ## Getting started
 - Clone the repo
 ```git
